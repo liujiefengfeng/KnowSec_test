@@ -124,13 +124,13 @@ def defaultpath():  #默认路径
 
 def cmd_line():  #命令行参数
     parser = argparse.ArgumentParser()
-    parser.add_argument("-n",action='store',dest = "num",help=" the number of threading",type = int,
+    parser.add_argument("-n",action='store',dest = "num",help=" the number of threading,default 10",type = int,
                         default = 10
                 )
     parser.add_argument("-o",action='store',dest="onwhere",help = "the place to save picture ",
                         default = defaultpath()
                 )
-    parser.add_argument("-l",action='store',dest="limit",type = int,help = "the limit of picture number",
+    parser.add_argument("-l",action='store',dest="limit",type = int,help = "the limit of picture number,default limitless",
                         default = -1
                 )
     results = parser.parse_args()
